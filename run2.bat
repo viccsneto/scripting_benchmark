@@ -4,43 +4,51 @@ echo SUM
 echo ================================================
 echo Native C++
 echo ................................................
-benchtime benchsum
+benchtime ./benchsum.exe
 echo ------------------------------------------------
 echo LuaJit
 echo ................................................
-benchtime luajit sum.lua
+benchtime ./luajit.exe sum.lua
+echo ------------------------------------------------
+echo Java
+echo ................................................
+benchtime java Sum
 echo ------------------------------------------------
 echo Node
 echo ................................................
 benchtime node sum.js
 echo ------------------------------------------------
+echo Lua (precompiled)
+echo ................................................
+benchtime ./lua.exe sum.lo
+echo ------------------------------------------------
 echo Lua
 echo ................................................
-benchtime lua sum.lua
-rem cho ------------------------------------------------
-rem echo Python
-rem echo ................................................
-rem benchtime python sum.py
+benchtime ./lua.exe sum.lua
 echo ================================================
 echo FIBONACCI
 echo ================================================
 echo Native C++
 echo ................................................
-benchtime benchfibonacci
+benchtime ./benchfibonacci.exe
 echo ------------------------------------------------
 echo LuaJit
 echo ................................................
-benchtime luajit fibonacci.lua
+benchtime ./luajit.exe fibonacci.lua
+echo ------------------------------------------------
+echo Java
+echo ................................................
+benchtime java Fibonacci
 echo ------------------------------------------------
 echo Node
 echo ................................................
 benchtime node fibonacci.js
 echo ------------------------------------------------
+echo Lua (precompiled)
+echo ................................................
+benchtime ./lua.exe fibonacci.lo
+echo ------------------------------------------------
 echo Lua
 echo ................................................
-benchtime lua fibonacci.lua
-rem echo ------------------------------------------------
-rem echo Python
-rem echo ................................................
-rem benchtime python fibonacci.py
-rem echo ===================== END ======================
+benchtime ./lua.exe fibonacci.lua
+echo ===================== END ======================
